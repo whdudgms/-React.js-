@@ -29,7 +29,65 @@ console.log(isIncludes)
 // 특정 요소의 인덱스(위치)를 찾아서 반환하는 메서드 
 let arr3 = [2,2,2];
 let index = arr3.indexOf(20);
-//console.log(index);
+console.log(index);
+
+
+let ObjectArr = [
+    {name : "이정환"},
+    {name:"홍길동"},
+];
+
+console.log(
+    ObjectArr.indexOf({name:"이정환"})
+);
+// === 얕은 비교로 indexOf가 진행됨 
+
+console.log(
+    ObjectArr.findIndex((item)=>item.name === "이정환")
+);
+
+
+//4 . findIndex
+//모드 요소를 순회하면, 콜백함수를 만족하는 그런
+// 특정 요소의 인덱스(위치)를 반환하는 메서드 
+let arr4 = [1,2,3];
+const findedIndex = arr4.findIndex(
+    (item)=> item ===999
+)
+console.log(findedIndex);
+
+
+// 5. find
+// 모든 요소를 순회하면서 콜백함수를 만족하는 요소를 찾는데, 요소를 그대로 반환
+
+let arr5 = [
+    {name: "이정환"},
+    {name: "홍길동"},
+];
+
+//첫번째로 찾은 객체 자체가 반환된다. 
+const finded = arr5.find(
+    (item) => item.name === "이정환"
+)
+console.log(finded)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
